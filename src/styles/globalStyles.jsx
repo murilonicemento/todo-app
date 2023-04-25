@@ -2,7 +2,16 @@ import { createGlobalStyle } from "styled-components";
 import * as colors from "../config/colors";
 
 export const GlobalStyles = createGlobalStyle`
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+    }
+
     body {
-        background-color: ${colors.darkTheme.des};
+        background-color: ${colors.darkTheme.backgroundColor};
+        font-family: "Josefin Sans";
     }
 `;
