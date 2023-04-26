@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background-color: ${colors.darkTheme.backgroundColor};
+        background: ${colors.darkTheme.backgroundColor};
         font-family: "Josefin Sans";
     }
 `;

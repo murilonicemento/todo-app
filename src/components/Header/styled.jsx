@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import bgDarkMobile from "../../assets/images/bg-mobile-dark.jpg";
 import bgLightMobile from "../../assets/images/bg-mobile-light.jpg";

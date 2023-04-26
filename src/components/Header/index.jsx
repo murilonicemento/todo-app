@@ -4,7 +4,6 @@ import moon from "../../assets/images/icon-moon.svg";
 import sun from "../../assets/images/icon-sun.svg";
 
 export function MyHeader() {
-  const [theme, setTheme] = useState("darkTheme");
   const [toggleImage, setToggleImage] = useState(moon);
 
   function toggleTheme() {
