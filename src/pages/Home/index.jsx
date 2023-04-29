@@ -7,8 +7,11 @@ export function Home() {
     <Main>
       <MyHeader />
       <Input>
-        <input type="checkbox" placeholder="Create a new todo..." />
-        <input type="text" name="" id="" />
+        <div className="custom-checkbox">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <label htmlFor="checkbox"></label>
+        </div>
+        <input type="text" name="" id="" placeholder="Create a new todo..." />
       </Input>
       <Checklists />
     </Main>
