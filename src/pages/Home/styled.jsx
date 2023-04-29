@@ -48,9 +48,9 @@ export const Main = styled.main`
     content: "";
     width: 20px;
     height: 20px;
-    border-radius: 4px;
     background-color: ${colors.darkTheme.cardColor};
-    border: none;
+    border: 1px solid ${colors.darkTheme.buttonsColor};
+    border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
   }
@@ -61,7 +61,7 @@ export const Main = styled.main`
     background-repeat: no-repeat;
     background-size: 10px;
     border: 1px solid ${colors.darkTheme.buttonsColor};
-    border-radius: 25px;
+    border-radius: 50%;
   }
 `;
 
@@ -70,4 +70,22 @@ export const Input = styled.section`
   width: 90%;
   position: absolute;
   top: 120px;
+`;
+
+export const Filter = styled.div`
+  width: 90%;
+  height: 40px;
+  background-color: ${colors.darkTheme.cardColor};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  border-radius: 4px;
+  color: ${colors.darkTheme.placeholderColor};
+
+  p:hover {
+    color: ${colors.buttonSelected};
+    cursor: pointer;
+  }
 `;

@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Checklists } from "../../components/Checklists";
 import { MyHeader } from "../../components/Header";
-import { Main, Input } from "./styled";
+import { Main, Input, Filter } from "./styled";
 
 export function Home() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState("");
   return (
     <Main>
       <MyHeader />
@@ -11,9 +14,30 @@ export function Home() {
           <input type="checkbox" name="checkbox" id="checkbox" />
           <label htmlFor="checkbox"></label>
         </div>
-        <input type="text" name="" id="" placeholder="Create a new todo..." />
+        <input
+          type="text"
+          name="input"
+          id="input"
+          placeholder="Create a new todo..."
+          value={newTask}
+          onChange={(event) => {
+            event.preventDefault();
+            setNewTask(event.target.value);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              setTasks([...tasks, newTask]);
+            }
+          }}
+        />
       </Input>
-      <Checklists />
+      <Checklists tasks={tasks} />
+      <Filter>
+        <p>All</p>
+        <p>Active</p>
+        <p>Completed</p>
+      </Filter>
     </Main>
   );
 }

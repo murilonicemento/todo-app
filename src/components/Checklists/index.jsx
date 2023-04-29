@@ -1,14 +1,29 @@
+import PropTypes from "prop-types";
 import { Cards } from "./styled";
 import cross from "../../assets/images/icon-cross.svg";
 
-export function Checklists() {
+export function Checklists({ tasks }) {
   return (
     <Cards>
-      <div className="card">
-        <input type="checkbox" name="checkbox" id="checklist" />
-        <label htmlFor="checklist">Lorem ipsum dolor sit amet.</label>
-        <img src={cross} alt="Cross Icon" />
-      </div>
+      <ul>
+        {tasks.map((tasks, index) => (
+          <li key={tasks}>
+            <div className="card">
+              <input
+                type="checkbox"
+                name="checkbox"
+                id={`checklist-${index}`}
+              />
+              <label htmlFor={`checklist-${index}`}>{tasks}</label>
+              <img src={cross} alt="Cross Icon" />
+            </div>
+          </li>
+        ))}
+      </ul>
     </Cards>
   );
 }
+
+Checklists.propTypes = {
+  tasks: PropTypes.array.isRequired,
+};

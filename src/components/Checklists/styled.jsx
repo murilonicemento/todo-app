@@ -4,15 +4,11 @@ import check from "../../assets/images/icon-check.svg";
 
 export const Cards = styled.section`
   width: 90%;
-  display: grid;
-  place-items: center;
   margin-top: -20px;
+  font-size: 14px;
   color: ${colors.darkTheme.fontColor};
-
-  input {
-    background-color: ${colors.darkTheme.cardColor};
-    color: ${colors.darkTheme.placeholderColor};
-    border-radius: 4px;
+  ul li {
+    list-style: none;
   }
 
   .card {
@@ -22,7 +18,16 @@ export const Cards = styled.section`
     border-radius: 4px;
     display: flex;
     align-items: center;
-    padding: 8px;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 18px;
+    border-bottom: 1px solid ${colors.darkTheme.placeholderColor};
+  }
+
+  input {
+    background-color: ${colors.darkTheme.cardColor};
+    color: ${colors.darkTheme.placeholderColor};
+    border-radius: 4px;
   }
 
   .card input {
@@ -33,9 +38,9 @@ export const Cards = styled.section`
     content: "";
     width: 20px;
     height: 20px;
-    border-radius: 4px;
     background-color: ${colors.darkTheme.cardColor};
-    border: none;
+    border: 1px solid ${colors.darkTheme.buttonsColor};
+    border-radius: 50%;
     display: inline-block;
     vertical-align: middle;
   }
@@ -46,18 +51,19 @@ export const Cards = styled.section`
     background-repeat: no-repeat;
     background-size: 10px;
     border: 1px solid ${colors.darkTheme.buttonsColor};
-    border-radius: 25px;
+    border-radius: 50%;
   }
 
   label {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
+    padding: 5px;
+    margin-top: 5px;
   }
 
   img {
     width: 15px;
     height: 15px;
-    margin-left: 95px;
   }
 `;
