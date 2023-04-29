@@ -6,6 +6,7 @@ export const Cards = styled.section`
   width: 90%;
   display: grid;
   place-items: center;
+  margin-top: -20px;
   color: ${colors.darkTheme.fontColor};
 
   input {

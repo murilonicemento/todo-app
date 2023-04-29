@@ -19,7 +19,7 @@ export const Main = styled.main`
 
   input[type="text"] {
     width: 90%;
-    height: 40px;
+    height: 50px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
     border-top-left-radius: 0;
@@ -28,7 +28,7 @@ export const Main = styled.main`
 
   .custom-checkbox {
     width: 12%;
-    height: 40px;
+    height: 50px;
     background-color: ${colors.darkTheme.cardColor};
     border-radius: 4px;
     border-top-right-radius: 0;
@@ -69,5 +69,5 @@ export const Input = styled.section`
   display: flex;
   width: 90%;
   position: absolute;
-  top: 140px;
+  top: 120px;
 `;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Header } from "./styled";
+import { Container, Header } from "./styled";
 import moon from "../../assets/images/icon-moon.svg";
 import sun from "../../assets/images/icon-sun.svg";
 
@@ -11,9 +11,11 @@ export function MyHeader() {
   }
 
   return (
-    <Header>
-      <h1>TODO</h1>
-      <img src={toggleImage} alt="Sun Image" onClick={toggleTheme} />
-    </Header>
+    <Container>
+      <Header>
+        <h1>TODO</h1>
+        <img src={toggleImage} alt="Sun Image" onClick={toggleTheme} />
+      </Header>
+    </Container>
   );
 }
