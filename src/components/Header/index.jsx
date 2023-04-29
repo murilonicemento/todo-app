@@ -4,7 +4,7 @@ import moon from "../../assets/images/icon-moon.svg";
 import sun from "../../assets/images/icon-sun.svg";
 
 export function MyHeader() {
-  const [toggleImage, setToggleImage] = useState(moon);
+  const [toggleImage, setToggleImage] = useState(sun);
 
   function toggleTheme() {
     toggleImage === moon ? setToggleImage(sun) : setToggleImage(moon);
@@ -13,7 +13,7 @@ export function MyHeader() {
   return (
     <Header>
       <h1>TODO</h1>
-      <img src={toggleImage} alt="Moon Image" onClick={toggleTheme} />
+      <img src={toggleImage} alt="Sun Image" onClick={toggleTheme} />
     </Header>
   );
 }
