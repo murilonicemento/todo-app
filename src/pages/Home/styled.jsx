@@ -18,7 +18,7 @@ export const Main = styled.main`
   }
 
   input[type="text"] {
-    width: 80%;
+    width: 90%;
     height: 40px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 18px;
@@ -56,7 +56,6 @@ export const Main = styled.main`
   }
 
   .custom-checkbox input:checked + label:before {
-    /* background: ${colors.checkBackground}; */
     background-image: url(${check});
     background-position: center;
     background-repeat: no-repeat;
