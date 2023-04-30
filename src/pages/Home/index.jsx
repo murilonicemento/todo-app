@@ -6,6 +6,11 @@ import { Main, Input, Filter } from "./styled";
 export function Home() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
+
+  function saveTask() {
+    localStorage.setItem("myToDoList", JSON.stringify(tasks));
+  }
+
   return (
     <Main>
       <MyHeader />
@@ -28,11 +33,13 @@ export function Home() {
             if (event.key === "Enter") {
               event.preventDefault();
               setTasks([...tasks, newTask]);
+              saveTask();
+              setNewTask("");
             }
           }}
         />
       </Input>
-      <Checklists tasks={tasks} />
+      <Checklists tasks={tasks} setTasks={setTasks} />
       <Filter>
         <p>All</p>
         <p>Active</p>
