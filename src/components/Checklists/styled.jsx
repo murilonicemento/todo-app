@@ -7,6 +7,7 @@ export const Cards = styled.section`
   margin-top: -20px;
   font-size: 14px;
   color: ${colors.darkTheme.fontColor};
+
   ul li {
     list-style: none;
   }
@@ -54,6 +55,22 @@ export const Cards = styled.section`
     border-radius: 50%;
   }
 
+  ul li div:first-child {
+    border-radius: 0px;
+  }
+
+  ul li:first-child div {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+
+  ul li:last-child div {
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
   label {
     display: flex;
     align-items: center;
@@ -65,5 +82,6 @@ export const Cards = styled.section`
   img {
     width: 15px;
     height: 15px;
+    cursor: pointer;
   }
 `;
