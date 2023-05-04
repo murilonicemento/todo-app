@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import PropTypes from "prop-types";
 import { Cards } from "./styled";
 import cross from "../../assets/images/icon-cross.svg";
@@ -8,14 +7,8 @@ export function Checklists({ tasks, setTasks }) {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
     setTasks(newTasks);
+    localStorage.setItem("myToDoList", JSON.stringify(newTasks));
   }
-
-  useEffect(() => {
-    const storedTasks = localStorage.getItem("myToDoList");
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-  }, []);
 
   return (
     <Cards>

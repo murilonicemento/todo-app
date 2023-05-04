@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Checklists } from "../../components/Checklists";
 import { MyHeader } from "../../components/Header";
 import { Main, Input, Filter } from "./styled";
@@ -10,6 +10,13 @@ export function Home() {
   function saveTask() {
     localStorage.setItem("myToDoList", JSON.stringify(tasks));
   }
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("myToDoList");
+    console.log(storedTasks);
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+  }, []);
 
   return (
     <Main>
