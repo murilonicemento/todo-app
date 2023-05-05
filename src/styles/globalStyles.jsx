@@ -14,4 +14,8 @@ export const GlobalStyles = createGlobalStyle`
         background: ${colors.darkTheme.backgroundColor};
         font-family: "Josefin Sans";
     }
+
+    input {
+        caret-color: ${colors.buttonSelected};
+    }
 `;
