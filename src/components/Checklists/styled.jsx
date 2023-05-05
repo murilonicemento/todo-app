@@ -35,6 +35,10 @@ export const Cards = styled.section`
     display: none;
   }
 
+  .card input:checked + label {
+    text-decoration: line-through;
+  }
+
   .card input + label:before {
     content: "";
     width: 20px;

@@ -74,7 +74,7 @@ export const Input = styled.section`
 
 export const Filter = styled.div`
   width: 90%;
-  height: 40px;
+  height: 50px;
   background-color: ${colors.darkTheme.cardColor};
   display: flex;
   align-items: center;
