@@ -33,7 +33,15 @@ export function Checklists({ tasks, setTasks }) {
       </ul>
       <Status>
         <p>{tasks.length} items left</p>
-        <button>Clear Completed</button>
+        <button
+          onClick={(event) => {
+            event.preventDefault();
+            setTasks([]);
+            localStorage.removeItem("myToDoList");
+          }}
+        >
+          Clear Completed
+        </button>
       </Status>
     </Cards>
   );
