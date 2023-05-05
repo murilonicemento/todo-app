@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Cards } from "./styled";
+import { Cards, Status } from "./styled";
 import cross from "../../assets/images/icon-cross.svg";
 
 export function Checklists({ tasks, setTasks }) {
@@ -31,6 +31,10 @@ export function Checklists({ tasks, setTasks }) {
           </li>
         ))}
       </ul>
+      <Status>
+        <p>{tasks.length} items left</p>
+        <button>Clear Completed</button>
+      </Status>
     </Cards>
   );
 }

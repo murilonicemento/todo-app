@@ -66,11 +66,6 @@ export const Cards = styled.section`
     border-bottom-left-radius: 0px;
   }
 
-  ul li:last-child div {
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-
   label {
     display: flex;
     align-items: center;
@@ -83,5 +78,28 @@ export const Cards = styled.section`
     width: 15px;
     height: 15px;
     cursor: pointer;
+  }
+`;
+
+export const Status = styled.div`
+  height: 50px;
+  background-color: ${colors.darkTheme.cardColor};
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  color: ${colors.darkTheme.placeholderColor};
+
+  button {
+    background-color: ${colors.darkTheme.cardColor};
+    font-family: "Josefin Sans", sans-serif;
+    color: ${colors.darkTheme.placeholderColor};
+    cursor: pointer;
+
+    &:hover {
+      color: ${colors.buttonSelected};
+    }
   }
 `;
