@@ -82,10 +82,19 @@ export const Filter = styled.div`
   gap: 15px;
   margin-top: 15px;
   border-radius: 4px;
-  color: ${colors.darkTheme.placeholderColor};
 
-  p:hover {
-    color: ${colors.buttonSelected};
-    cursor: pointer;
+  button {
+    &:first-child {
+      color: ${colors.buttonSelected};
+    }
+
+    background-color: ${colors.darkTheme.cardColor};
+    font-family: "Josefin Sans", sans-serif;
+    color: ${colors.darkTheme.placeholderColor};
+
+    &:hover {
+      color: ${colors.darkTheme.fontColor};
+      cursor: pointer;
+    }
   }
 `;
