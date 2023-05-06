@@ -92,6 +92,10 @@ export const Input = styled.section`
   width: 90%;
   position: absolute;
   top: 120px;
+
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
 `;
 
 export const Filter = styled.div`
@@ -118,5 +122,9 @@ export const Filter = styled.div`
       color: ${colors.darkTheme.fontColor};
       cursor: pointer;
     }
+  }
+
+  @media (min-width: 1000px) {
+    width: 60%;
   }
 `;

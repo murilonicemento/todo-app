@@ -83,6 +83,10 @@ export const Cards = styled.section`
     height: 15px;
     cursor: pointer;
   }
+
+  @media (min-width: 1000px) {
+    width: 60%;
+  }
 `;
 
 export const Status = styled.div`

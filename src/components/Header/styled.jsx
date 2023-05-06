@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import bgDarkMobile from "../../assets/images/bg-mobile-dark.jpg";
-import bgLightMobile from "../../assets/images/bg-mobile-light.jpg";
-import bgDarkDesktop from "../../assets/images/bg-desktop-dark.jpg";
-import bgLightDesktop from "../../assets/images/bg-desktop-light.jpg";
 
 export const Container = styled.div`
   width: 100%;
@@ -26,5 +23,10 @@ export const Header = styled.header`
   img {
     margin-right: 20px;
     cursor: pointer;
+  }
+
+  @media (min-width: 1000px) {
+    width: 60%;
+    margin: 50px auto 0 auto;
   }
 `;
