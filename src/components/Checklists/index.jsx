@@ -1,11 +1,8 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import { Cards, Status } from "./styled";
 import cross from "../../assets/images/icon-cross.svg";
 
 export function Checklists({ tasks, setTasks }) {
-  // const [active, setActive] = useState(true);
-
   function handleDelete(index) {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
@@ -22,7 +19,6 @@ export function Checklists({ tasks, setTasks }) {
               <input
                 type="checkbox"
                 name="checkbox"
-                // checked={active}
                 id={`checklist-${index}`}
               />
               <label htmlFor={`checklist-${index}`}>{value}</label>

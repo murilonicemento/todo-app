@@ -55,7 +55,6 @@ export const Cards = styled.section`
     background-position: center;
     background-repeat: no-repeat;
     background-size: 10px;
-    border: 1px solid ${colors.darkTheme.buttonsColor};
     border-radius: 50%;
   }
 
@@ -76,6 +75,7 @@ export const Cards = styled.section`
     gap: 9px;
     padding: 5px;
     margin-top: 5px;
+    cursor: pointer;
   }
 
   img {

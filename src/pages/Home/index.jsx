@@ -1,24 +1,15 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { Checklists } from "../../components/Checklists";
 import { MyHeader } from "../../components/Header";
 import { Main, Input, Filter } from "./styled";
 
-export function Home({ active, setActive }) {
+export function Home() {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
 
   function saveTask() {
     localStorage.setItem("myToDoList", JSON.stringify(tasks));
   }
-
-  // function handleSelectActive(event) {
-  //   event.preventDefault();
-  //   let newTasks = [...tasks];
-  //   if (active === false) {
-  //     newTasks.splice(index, 1);
-  //   }
-  // }
 
   useEffect(() => {
     const storedTasks = localStorage.getItem("myToDoList");
@@ -64,8 +55,3 @@ export function Home({ active, setActive }) {
     </Main>
   );
 }
-
-// Home.propTypes = {
-//   active: PropTypes.array.isRequired,
-//   setActive: PropTypes.func.isRequired,
-// };

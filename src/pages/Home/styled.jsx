@@ -63,6 +63,28 @@ export const Main = styled.main`
     border: 1px solid ${colors.darkTheme.buttonsColor};
     border-radius: 50%;
   }
+
+  @media (min-width: 700px) {
+    .custom-checkbox {
+      width: 9%;
+    }
+
+    input[type="text"] {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .custom-checkbox {
+      width: 7%;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .custom-checkbox {
+      width: 4%;
+    }
+  }
 `;
 
 export const Input = styled.section`
