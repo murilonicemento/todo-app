@@ -1,4 +1,4 @@
-# React Card Form
+# To Do App
 
 Este é um aplicativo To-Do simples, criado utilizando React e Styled Components. Ele permite que o usuário adicione tarefas, marque como concluídas e exclua tarefas.
 
